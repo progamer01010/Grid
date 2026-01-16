@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  padding: 24px;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: #1f2430;
+  padding: 10px;
+  height: 180px;
+
+  display: grid;
+  gap: 8px;
+  grid-auto-rows: 1fr;
+
+}
+
+/* Top bar */
+.card::before {
+  content: "";
+  height: 14px;
+  background: #ffffff;
+  grid-column: 1 / -1;
+  
+}
+
+/* SPAN BLOCKS */
+.card span {
+  
+}
+
+/* LAYOUTS */
+.c1 { grid-template-columns: repeat(3, 1fr); }
+.c2 { grid-template-columns: 2fr 1fr; }
+.c3 { grid-template-columns: repeat(3, 1fr); }
+.c4 { grid-template-columns: 1fr 1fr; }
+.c5 { grid-template-columns: repeat(6, 1fr); }
+.c6 { grid-template-columns: repeat(4, 1fr); }
+.c7 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.c8 { grid-template-columns: repeat(5, 1fr); }
+.c9 { grid-template-columns: 1fr 2fr; }
+
+/* SPANS */
+.wide { grid-column: 1 / -1; }
+.tall { grid-row: span 2; }
+
+/* COLORS (matched to image) */
+.r  { background: green; }   /* red */
+.o  { background: #a54302; }   /* orange */
+.o2 { background: red; }
+.g  { background: #1f00a8; }   /* green */
+.t  { background: pink; }   /* teal */
+.m  { background: #3ddc97; }   /* mint */
